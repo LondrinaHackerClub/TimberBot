@@ -1,0 +1,31 @@
+int sensorValue = 0;
+void setup() {
+  Serial.begin(9600);
+  delay(2000);
+ // valorInicio = analogRead(0);
+ // valorInicio = valorInicio+10; 
+  
+ // Keyboard.press(KEY_A);
+ // delay(1);
+ // Keyboard.release(KEY_A);
+}
+void loop() {
+  delay(200);
+  sensorValue = analogRead(0); 
+  Serial.println(sensorValue); 
+  if ( sensorValue < 230){
+     Keyboard.press(KEY_LEFT);
+     delay(1);
+     Keyboard.release(KEY_LEFT);
+     delay(1);
+  } 
+  if (sensorValue >= 230){
+    Keyboard.press(KEY_RIGHT);
+    delay(1);
+    Keyboard.release(KEY_RIGHT);
+    delay(1);
+  }
+}
+
+
+
