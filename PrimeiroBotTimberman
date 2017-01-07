@@ -2,12 +2,6 @@ int sensorValue = 0;
 void setup() {
   Serial.begin(9600);
   delay(2000);
- // valorInicio = analogRead(0);
- // valorInicio = valorInicio+10; 
-  
- // Keyboard.press(KEY_A);
- // delay(1);
- // Keyboard.release(KEY_A);
 }
 void loop() {
   delay(200);
